@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>autorest-clientruntime-for-java</artifactId>
+    <groupId>com.microsoft.azure</groupId>
+    <version>1.2.1.1</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>azure-client-authentication</artifactId>
+  <name>Azure Java Client Authentication Library for AutoRest</name>
+  <version>1.2.1.1</version>
+  <description>This package contains the authentication connectors to Active Directory for JDK.</description>
+  <url>https://github.com/Azure/autorest-clientruntime-for-java</url>
+  <developers>
+    <developer>
+      <id>microsoft</id>
+      <name>Microsoft</name>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>The MIT License (MIT)</name>
+      <url>http://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git@github.com:Azure/autorest-clientruntime-for-java.git</connection>
+    <tag>v1.2.1</tag>
+    <url>scm:git:https://github.com/Azure/autorest-clientruntime-for-java</url>
+  </scm>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+          <excludePackageNames>*.implementation.*;*.utils.*;com.microsoft.schemas._2003._10.serialization;*.blob.core.storage</excludePackageNames>
+          <bottom>&lt;code&gt;/**
+&lt;br /&gt;* Copyright (c) Microsoft Corporation. All rights reserved.
+&lt;br /&gt;* Licensed under the MIT License. See License.txt in the project root for
+&lt;br /&gt;* license information.
+&lt;br /&gt;*/&lt;/code&gt;</bottom>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>hamcrest-core</artifactId>
+          <groupId>org.hamcrest</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+  <properties>
+    <legal>[INFO] Any downloads listed may be third party software.  Microsoft grants you no rights for third party software.</legal>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+</project>
+
